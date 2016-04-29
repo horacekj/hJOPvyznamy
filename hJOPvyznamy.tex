@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper,landscape]{article}
+
+% ===== LOADING PACKAGES =====
+% language settings, main documnet language last
+\usepackage[czech]{babel}
+% enabling new fonts support (nicer)
+\usepackage{lmodern}
+% setting input encoding
+\usepackage[utf8]{inputenc}
+% setting output encoding
+\usepackage[T1]{fontenc}
+% set page margins
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+% package to make bullet list nicer
+%\usepackage{enumitem}
+% list with smaller distances
+%\usepackage{paralist}
+\usepackage{enumitem}
+% multiple columns on page
+\usepackage{multicol}
+% change spacing
+\usepackage{titlesec}
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+\huge Významy povelů hJOP\\
+\normalsize Jan Horáček (jan.horacek@kmz-brno.cz)\\
+v1.1, \today
+\end{center}
+
+% Uprava okraju section a subsection, aby se vse veslo na jednu stranku
+\titlespacing*{\section} {0pt}{1.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{1.75ex plus 1ex minus .2ex}{0.5ex plus .2ex}
+
+%\title{Významy povelů v~JOP}
+%\author{Jan Horáček\\
+%	\normalsize jan.horacek@kmz-brno.cz}
+%\maketitle
+
+% Vlastni itemize s vlastnimi okraji
+\newlist{compactitem}{itemize}{3} % 3 is max-depth
+\setlist[compactitem]{label=\textbullet, nosep}
+\setlist[compactitem]{label=\textbullet, leftmargin=1em, labelindent=0.1em, itemsep=0em, parsep=0em}
+
+\begin{multicols}{3}
+
+\section{Dopravní kancelář}
+\begin{compactitem}
+	\item \texttt{MP} -- přepnout stanici na místní provoz
+	\item \texttt{DP} -- přepnout stanici na dálkový provoz
+	\item \texttt{OSV} -- otevřít menu osvětlení
+	\item \texttt{LOKO} -- otevřít menu lokomotiv
+	\item \texttt{MSG} -- otevřít okno zpráv
+	\item \texttt{CAS>} -- spustit modelový čas
+	\item \texttt{CAS<} -- zastavit modelový čas
+	\item \texttt{CAS} -- nastavit modelový čas	a~zrychlení
+	\item \texttt{NUZ>} -- nouzově uvolnit závěr vybraných bloků
+	\item \texttt{NUZ<} -- zrušit nouzové uvolnění závěrů
+	\item \texttt{KC} -- rozsvítit přivolávací návěst
+	\item \texttt{INFO} -- zobrazit informace o stanici
+\end{compactitem}
+
+\subsection{Menu lokomotiv}
+\begin{compactitem}
+	\item \texttt{NOVÁ loko} -- vytvořit novou lokomotivu
+	\item \texttt{EDIT loko} -- editovat lokomotivu
+	\item \texttt{SMAZAT loko} -- smazat lokomotivu
+	\item \texttt{PŘEDAT loko} -- předat lokomotivu do stanice
+	\item \texttt{RUČ loko} -- lokomotivu do ručního ovladače
+\end{compactitem}
+
+\section{Výhybka}
+\begin{compactitem}
+	\item \texttt{S+} -- přestavit výhybku do polohy plus
+	\item \texttt{S-} -- přestavit výhybku do polohy mínus
+	\item \texttt{NS+} -- nouzově přestavit výh. do polohy plus
+	\item \texttt{NS-} -- nouzově přestavit výh. do polohy mínus
+	\item \texttt{STIT} -- editovat štítek výhybky
+	\item \texttt{VYL} -- editovat výluku výhybky
+	\item \texttt{ZAV>} -- zavést nouzový závěr
+	\item \texttt{ZAV<} -- zrušit nouzový závěr
+	\\
+	\\
+\end{compactitem}
+	
+\section{Úsek}
+\begin{compactitem}
+	\item \texttt{NOVÝ vlak} -- zavést novou soupravu
+	\item \texttt{EDIT vlak} -- editovat soupravu
+	\item \texttt{ZRUŠ vlak} -- odstranit soupravu z kolejiště
+	\item \texttt{UVOL vlak} -- odstranit soupravu z bloku
+	\item \texttt{VEZMI vlak} -- navrátit vlak do kontroly počítače
+	\item \texttt{PŘESUŇ vlak>} -- přesunout vlak na jinou kolej
+	\item \texttt{PŘESUŇ vlak<} -- ukončit přesouvání vlaku
+	\item \texttt{RUČ vlak} -- lokomotivu do ručního ovladače
+	\item \texttt{RBP} -- zrušit poruchu blokové podmínky v úseku
+
+	\item \texttt{STIT} -- editovat štítek úseku
+	\item \texttt{VYL} -- editovat výluku úseku
+
+	\item \texttt{ZAST>} -- aktivovat zastávku
+	\item \texttt{ZAST<} -- deaktivovat zastávku
+	\item \texttt{JEĎ vlak} -- odjet s vlakem ze zastávky
+	
+	\item \texttt{KC} -- konec jízdní cesty
+	\item \texttt{VB} -- variantní bod jízdní cesty
+	
+	\item \texttt{NUZ>} -- nouzově uvolnit závěr
+	\item \texttt{NUZ<} -- zrušit nouzové uvolnění závěru	
+\end{compactitem}	
+
+\section{Návěstidlo}
+\begin{compactitem}
+	\item \texttt{VC>} -- zavést počátek vlakové cesty
+	\item \texttt{VC<} -- zrušit počátku vlakové cesty
+	\item \texttt{PC>} -- zavést počátek posunové cesty
+	\item \texttt{PC<} -- zrušit počátek posunové cesty
+	\item \texttt{ZAM>} -- zamknout návěstidlo na návěst STŮJ
+	\item \texttt{ZAM<} -- odemknou návěstidlo
+	\item \texttt{STUJ} -- zrušit návěst
+	\item \texttt{DN} -- dodatečná návěst
+	\item \texttt{RC} -- zrušit jízdní cestu
+	\item \texttt{AB>} -- zavést automatické stavění jízdní cesty
+	\item \texttt{AB<} -- zrušit automatické stavění jízdní cesty
+	\item \texttt{PN>} -- zapnout přivolávací návěst
+	\item \texttt{PN<} -- zrušit přivolávací návěst
+	\item \texttt{PP>} -- počátek nouzové posunové cesty
+	\item \texttt{PP<} -- zrušení počátku nouzové posunové cesty
+	\item \texttt{PPN} -- prodloužit svícení přivolávací návěsti
+	\item \texttt{RNZ} -- zrušit nouzové závěry po nouzové cestě
+\end{compactitem}	
+
+\section{Přejezd}
+\begin{compactitem}
+	\item \texttt{UZ} -- uzavřít přejezd
+	\item \texttt{ZUZ} -- zrušit uzavření přejezdu
+	\item \texttt{NOT>} -- nouzově otevřít přejezd
+	\item \texttt{NOT<} -- zrušit nouzové otevření přejezdu
+	\item \texttt{STIT} -- editovat štítek přejezdu	
+\end{compactitem}
+
+\section{Úvazka}
+\begin{compactitem}
+	\item \texttt{ZTS>} -- žádost o traťový souhlas
+	\item \texttt{ZTS<} -- zrušit žádost o traťový souhlas
+	\item \texttt{UTS} -- udělit traťový souhlas
+	\item \texttt{ZAK>} -- zavést zákaz odjezdu do trati
+	\item \texttt{ZAK<} -- zrušit zákaz odjezdu do trati
+	\item \texttt{OTS} -- odmítnout žádost o traťový souhlas
+	\item \texttt{STIT} -- editovat štítek úvazky
+\end{compactitem}
+
+\section{Zámek}
+\begin{compactitem}
+	\item \texttt{UK} -- uvolnit klíč
+	\item \texttt{ZUK} -- zrušit uvolnění klíče
+	\item \texttt{STIT} -- editovat štítek zámku
+\end{compactitem}
+
+\section{Zásobník}
+\begin{compactitem}
+	\item \texttt{PV} -- přímá (přednostní) volba
+	\item \texttt{VZ} -- volba do zásobníku
+	\item \texttt{EZ} -- editace zásobníku
+\end{compactitem}
+
+\end{multicols}
+
+\end{document}
