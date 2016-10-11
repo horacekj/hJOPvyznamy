@@ -1,0 +1,15 @@
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended
+  texlive-latex-extra texlive-fonts-extra texlive-latex-recommended texlive-lang-czechslovak
+  lmodern
+script: make
+deploy:
+  provider: releases
+  api_key:
+    secure: AEfRIp2hush4IwyeEpBgVsj8A7o3QrIhmVBn+J6ZnF2Ln7lM2dSQ6/b2pnF63KD/BHid6jR2/oWjnHc8lUSFGWTTi1ss/FkjxD+sJL2q1SDH2xMeZyO01a8l2wc6WirBWBv9M38YER6NcR0QY9DVsJ6cXI1dS6H46HfqX3FDBb65KReEY+pzDLfgTkjByMWSWHpEBS2btrX+sxxCPg6LNvoNzjhzp/YpiPjyw4Pa272SWJGMxfrjC+Nf4atKuP578KvofRPxk4omixDZ2m5EhdnmPUoRDiNRwNnnsfyctl2PsmIBYlhlVZ2FIPFld3IhrWhPPwWouYnfJVjvWbaZoJXp0gVB3iAudcYEX2udteOJXqcOYdlx+cHhdfglYFDEuR7FAWEZpeaY7Ce8fUKdtjb5QrZeQlm0ywx0NkZfPXleD7d05jMi4eqNath5KxPZjxfCeCn2GlDgSvckYIP9biSMcRL/RpKutopypsSX0yzVsRShq0r+4QDBgqqf3WeTYvoLqZKDJ2AEH2rQJELKUdV2o5i7IeulBYBtDMbfCyKmQ0AvmgMb2IDQ2QLOs/ahI89/BWHbSU3etydYcEvw5GFNQhGj4b2vKcTbZbw6VrWrCmxCll41abPDpLBXeG06kj79o3HzXlm6tNQGntHZAJHxMM7b9UnfW1HXIe8MzDc=
+  file: hJOPvyznamy.pdf
+  skip_cleanup: true
+  on:
+    tags: true
