@@ -10,7 +10,7 @@
 % setting output encoding
 \usepackage[T1]{fontenc}
 % set page margins
-\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage[top=0.6cm, bottom=1cm, left=1cm, right=1cm]{geometry}
 % package to make bullet list nicer
 %\usepackage{enumitem}
 % list with smaller distances
@@ -27,17 +27,12 @@
 \begin{center}
 \huge Významy povelů hJOP\\
 \normalsize Jan Horáček (jan.horacek@kmz-brno.cz)\\
-v1.1, \today
+v1.2, \today
 \end{center}
 
 % Uprava okraju section a subsection, aby se vse veslo na jednu stranku
 \titlespacing*{\section} {0pt}{1.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
-\titlespacing*{\subsection} {0pt}{1.75ex plus 1ex minus .2ex}{0.5ex plus .2ex}
-
-%\title{Významy povelů v~JOP}
-%\author{Jan Horáček\\
-%	\normalsize jan.horacek@kmz-brno.cz}
-%\maketitle
+\titlespacing*{\subsection} {0pt}{1.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
 
 % Vlastni itemize s vlastnimi okraji
 \newlist{compactitem}{itemize}{3} % 3 is max-depth
@@ -70,6 +65,7 @@ v1.1, \today
 	\item \texttt{PŘEDAT loko} -- předat lokomotivu do stanice
 	\item \texttt{HLEDAT loko} -- vyhledat lokomotivu
 	\item \texttt{RUČ loko} -- lokomotivu do ručního ovladače
+	\item \texttt{MAUS loko} -- lok. do Rocomaus (uLI-master)
 \end{compactitem}
 
 \section{Výhybka}
@@ -96,6 +92,7 @@ v1.1, \today
 	\item \texttt{PŘESUŇ vlak>} -- přesunout vlak na jinou kolej
 	\item \texttt{PŘESUŇ vlak<} -- ukončit přesouvání vlaku
 	\item \texttt{RUČ vlak} -- lokomotivu do ručního ovladače
+	\item \texttt{MAUS vlak} -- lok. do Rocomaus (uLI-master)
 	\item \texttt{RBP} -- zrušit poruchu blokové podmínky v úseku
 
 	\item \texttt{STIT} -- editovat štítek úseku
