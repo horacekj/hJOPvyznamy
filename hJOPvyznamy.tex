@@ -10,7 +10,7 @@
 % setting output encoding
 \usepackage[T1]{fontenc}
 % set page margins
-\usepackage[top=0.6cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+\usepackage[top=0.6cm, bottom=0.6cm, left=1cm, right=1cm]{geometry}
 % package to make bullet list nicer
 %\usepackage{enumitem}
 % list with smaller distances
@@ -27,13 +27,13 @@
 \begin{center}
 \huge Významy povelů hJOP\\
 \normalsize Jan Horáček (jan.horacek@kmz-brno.cz)\\
-v1.3, \today
+v1.4, \today
 \end{center}
 
 \vspace{-4ex}
 
 % Uprava okraju section a subsection, aby se vse veslo na jednu stranku
-\titlespacing*{\section} {0pt}{1.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
+\titlespacing*{\section} {0pt}{1.5ex plus 1ex minus .5ex}{0.3ex plus .2ex}
 \titlespacing*{\subsection} {0pt}{1.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
 
 % Vlastni itemize s vlastnimi okraji
@@ -81,8 +81,6 @@ v1.3, \today
 	\item \texttt{VYL} -- editovat výluku výhybky
 	\item \texttt{ZAV>} -- zavést nouzový závěr
 	\item \texttt{ZAV<} -- zrušit nouzový závěr
-	\\
-	\\
 \end{compactitem}
 	
 \section{Úsek}
@@ -153,6 +151,8 @@ v1.3, \today
 	\item \texttt{ZAK<} -- zrušit zákaz odjezdu do trati
 	\item \texttt{OTS} -- odmítnout žádost o traťový souhlas
 	\item \texttt{STIT} -- editovat štítek úvazky
+	\item \texttt{ZAV>} -- zavést nouzový závěr
+	\item \texttt{ZAV<} -- zrušit nouzový závěr	
 \end{compactitem}
 
 \section{Zámek}
